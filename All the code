@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>A-frame</title>
+    
+
+  </head>
+    
+  <body>
+  <html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+    <script src="https://gftruj.github.io/webzamples/aframe/controls/oculus-thumbstick-controls.js"></script>
+
+    <!-- Environment Component -->
+    <script src="https://unpkg.com/aframe-environment-component@1.5.x/dist/aframe-environment-component.min.js"></script>
+  </head>
+
+  <body>
+    <a-scene>
+
+      <!-- Assets -->
+      <a-assets>
+        <a-asset-item 
+          id="model" 
+          src="https://cdn.jsdelivr.net/gh/isabellazhang1234321-creator/aframeblender@main/Object.glb">
+   </a-assets>
+
+      <!-- Environment -->
+      <a-entity environment="preset: forest; dressingAmount: 100"></a-entity>
+
+   <a-entity 
+        gltf-model="#model" 
+        position="-2.9 1.4 -0.03" 
+        scale="0.2 0.2 0.2">
+      </a-entity>
+        
+      <!-- VR Camera & Controls -->
+      <a-entity id="rig" position="0 1.7 3.5">
+            <a-camera>
+                <a-entity oculus-touch-controls="hand: left" ></a-entity>
+                <a-entity oculus-touch-controls="hand: right" oculus-thumbstick-controls></a-entity>
+            </a-camera>
+        </a-entity>
+
+    </a-scene>
+  </body>
+</html>
+    
+  </body>
+  
+</html>
